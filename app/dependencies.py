@@ -6,6 +6,6 @@ from settings.config import Settings
 def get_settings():
     return Settings()
 
-async def get_db() -> AsyncSession:
+async def get_db() -> AsyncSession: # type: ignore
     async for session in get_async_db():
         yield session
